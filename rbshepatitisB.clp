@@ -26,7 +26,7 @@
 (defrule antihdv_positive
    (anti-HDV positive)
    =>
-   (printout t "Hepatitis B+D")
+   (printout t "Hasil Prediksi = Hepatitis B+D")
    (printout t crlf crlf)) ;TERMINAL
 
 (defrule antihdv_negative
@@ -48,7 +48,7 @@
       (anti-HDV negative)
       (anti-HBc negative))
    =>
-   (printout t "Uncertain configuration")
+   (printout t "Hasil Prediksi = Uncertain configuration")
    (printout t crlf crlf)) ;TERMINAL
 
 (defrule antihbc2_positive
@@ -57,7 +57,7 @@
       (anti-HBs positive)
       (anti-HBc positive))
    =>
-   (printout t "Cured")
+   (printout t "Hasil Prediksi = Cured")
    (printout t crlf crlf)) ;TERMINAL
 (defrule antihbc2_negative
    (and 
@@ -65,7 +65,7 @@
       (anti-HBs positive)
       (anti-HBc negative))
    =>
-   (printout t "Vaccinated")
+   (printout t "Hasil Prediksi = Vaccinated")
    (printout t crlf crlf)) ;TERMINAL
 
 (defrule antihbc3_positive
@@ -74,7 +74,7 @@
       (anti-HBs negative)
       (anti-HBc positive))
    =>
-   (printout t "Unclear (possible resolved)")
+   (printout t "Hasil Prediksi = Unclear (possible resolved)")
    (printout t crlf crlf)) ;TERMINAL
 (defrule antihbc3_negative
    (and 
@@ -82,7 +82,7 @@
       (anti-HBs negative)
       (anti-HBc negative))
    =>
-   (printout t "Healthy no vaccinated or suspicious")
+   (printout t "Hasil Prediksi = Healthy no vaccinated or suspicious")
    (printout t crlf crlf)) ;TERMINAL
 
 ; anti-HBs rule -----------------------------------
@@ -91,7 +91,7 @@
       (anti-HDV negative)
       (anti-HBs positive))
    =>
-   (printout t "Uncertain configuration")
+   (printout t "Hasil Prediksi = Uncertain configuration")
    (printout t crlf crlf)) ;TERMINAL
 (defrule antihbs1_negative
    (and
@@ -118,7 +118,7 @@
       (anti-HBs negative) 
       (IgManti-HBc positive))
    =>
-   (printout t "Acute infection")
+   (printout t "Hasil Prediksi = Acute infection")
    (printout t crlf crlf)) ;TERMINAL
 
 (defrule antihbs_negative
@@ -126,5 +126,5 @@
       (anti-HBs negative) 
       (IgManti-HBc negative))
    =>
-   (printout t "Chronic infection")
+   (printout t "Hasil Prediksi = Chronic infection")
    (printout t crlf crlf)) ;TERMINAL
